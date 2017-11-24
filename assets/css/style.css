@@ -1,0 +1,211 @@
+body, html {
+	margin: 0;
+	padding: 0;
+	font-family: 'Nunito', sans-serif;
+	background-color: #9DDCF9;
+	color: #303030;
+
+}
+
+a {
+	text-decoration: none;
+}
+
+.nav{
+	display: inline-block;
+	text-align: center;
+	padding: 14px 25px;
+	color: #303030;
+	font-size: 15px;
+}
+
+#homebutton {
+	width: 50px;
+	position: relative;
+	left: 5%;
+	top: 40px;
+}
+
+#nav-items {
+	left: 70%;
+	width: 100%;
+	position: relative;
+
+}
+
+#nav-bar {
+	width: 100%;
+}
+
+.nav:hover {
+	color: white;
+	transition: all 0.5s ease-in-out;
+
+}
+
+/* ABOUT PAGE */
+#description-container {
+	position: relative;
+	width: 100%;
+}
+
+
+#tagline {
+	position: relative;
+	top: 500px;
+}
+
+#name {
+	font-size: 25px;
+	font-weight: 400;
+	margin-left: 40%;
+	padding-top: 3%;
+	
+}
+
+
+#pic-container {
+	position: absolute;
+	border-radius: 300px;
+	width: 250px;
+	height: 250px;
+	margin-left: 240px;
+	margin-top: 50px;
+	display: inline-block;
+	background-image: url("../img/angela.jpg");
+	background-size: cover;
+}
+
+#pic-container img {
+	width: 100%;
+	height: auto;
+}
+
+#about-paragraph {
+	padding: 10px;
+	margin-top: 30px;
+	font-size: 18px;
+}
+
+/* END ABOUT PAGE */
+
+#animation {
+	position: absolute;
+	width: 100%;
+	padding-top: 2%;
+	margin-left: 5%;
+	
+}
+
+.item {
+	position: absolute;
+	width: 27%;
+}
+
+
+#laptop {
+	z-index: -1;
+	margin: 0 0 0 5%;;
+	padding-top: 12px;
+
+}
+
+#laptopscreen {
+	z-index: 10;
+	opacity: 0;
+	margin: 0 0 0 5%;;
+	padding-top: 12px;
+	transition: all 1.5s ease-in-out;
+}
+
+#avotoast, #plate {
+	margin: 25% 0 0 15%;;
+	width: 10%
+}
+
+#avotoast {
+	z-index: 10;
+}
+
+#tea {
+	width: 6%;
+	margin: 8% 0 0 47%;;
+}
+
+#iphoneoff {
+	z-index: -1;
+	width: 7%;
+	margin: 17% 0 0 60%;;
+}
+
+#iphoneon {
+	z-index: 10;
+	width: 7%;
+	margin: 17% 0 0 60%;;
+	opacity: 0;
+	transition: all 1.5s ease-in-out;
+}
+
+#notebook {
+	width: 8%;
+	margin: 20% 0 0 35%;;
+}
+
+#pen1 {
+	width: 10%;
+	margin: 27% 0 0 50%;;
+}
+
+#pen2 {
+	width: 10%;
+	margin: 27% 0 0 50.5%;;
+}
+
+
+
+@keyframes spin {
+	0% {
+		transform: rotate(360deg);
+		animation-timing-function: ease-in-out;
+	}
+	
+	100% {
+		transform: rotate(-360deg);
+		animation-timing-function: ease-in-out;
+	}
+}
+
+@keyframes spinreverse {
+	0% {
+		transform: rotate(-360deg);
+		animation-timing-function: ease-in-out;
+	}
+	
+	100% {
+		transform: rotate(360deg);
+		animation-timing-function: ease-in-out;
+	}
+}
+
+@keyframes wiggle {
+	0% {
+		transform: rotate(0deg) translateY(0%);	
+	}
+
+	25% {
+		transform: rotate(-2deg) translateY(-50px);
+	}
+	50% {
+		transform: rotate(0deg) translateY(0%);	
+	}	
+
+	75% {
+		transform: rotate(2deg) translateY(-50px);
+	}
+
+	100% {
+		transform: rotate(0deg) translateY(0%);
+	}		
+}
+
+
