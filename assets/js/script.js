@@ -1,47 +1,86 @@
 $(document).ready(function() {
 
-	// $("#avocado").hover(function() {
-	// 	$("#avocado").css('animation', 'spin 1.5s ease-in-out');
-	// });
 	
+	// PAGE FADE IN/OUT TRANSITION
+	window.addEventListener("beforeunload", function () {
+	  document.body.classList.add("animate-out");
+	});
+	
+	$('#homebutton').hover(function() {
+		$('#homebutton').css('animation', 'spin 1s ease-in-out infinite');
+		$('#homebutton').one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
+		function(e) {
+		$('#homebutton').css('animation', 'spin 1s ease-in-out infinite');
+		});
+	}, function(){
+		$('#homebutton').css('animation', '');
+	});
+
 	$('#laptopscreen').on('click', function() {
 		if ($('#laptopscreen').css('opacity') == 0) $('#laptopscreen').css('opacity', 1);
-		else ($('#laptopscreen').css('opacity', 0))
+		else ($('#laptopscreen').css('opacity', 0))	
 	});
+
+
+	
+
 
 	$('#iphoneon').on('click', function() {
 		if ($('#iphoneon').css('opacity') == 0) $('#iphoneon').css('opacity', 1);
 		else ($('#iphoneon').css('opacity', 0))
 	});
 
+	$('#iphoneon').on('click', function() {
+		if ($('#phonecaption').css('opacity') == 0) $('#phonecaption').css('opacity', 1);
+		else ($('#phonecaption').css('opacity', 0))
+	});
+
+	$('iphoneon').hover(function() {
+		$('#phonecaption').animate({'opacity': 1});
+		$('#iphoneon').one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
+		function(e) {});
+	},
+		function() {
+			$('#phonecaption').animate({'opacity': 0});
+		
+	});
+
 	$('#avotoast').hover(function() {
 		$('#avotoast').css('animation', 'spin 2s ease-in-out infinite');
+		$('#toastcaption').animate({'opacity': 1});
 		$('#avotoast').one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
 		function(e) {
 		$('#avotoast').css('animation', 'spin 2s ease-in-out infinite');
 		});
 	}, function(){
 		$('#avotoast').css('animation', '');
+		$('#toastcaption').animate({'opacity': 0});
+
 	});
 
 	$('#tea').hover(function() {
 		$('#tea').css('animation', 'spin 2s ease-in-out infinite');
+		$('#teacaption').animate({'opacity': 1});
 		$('#tea').one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
 		function(e) {
 		$('#tea').css('animation', 'spin 2s ease-in-out infinite');
 		});
 	}, function(){
 		$('#tea').css('animation', '');
+		$('#teacaption').animate({'opacity': 0});
 	});
+
 
 	$('#notebook').hover(function() {
 		$('#notebook').css('animation', 'wiggle 1s ease-in-out infinite');
+		$('#bookcaption').animate({'opacity': 1});
 		$('#notebook').one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
 		function(e) {
 		$('#notebook').css('animation', 'wiggle 1s ease-in-out infinite');
 		});
 	}, function(){
 		$('#notebook').css('animation', '');
+		$('#bookcaption').animate({'opacity': 0});
 	});
 
 	$('#pen2').hover(function() {
@@ -58,15 +97,14 @@ $(document).ready(function() {
 	});
 
 
+	// BLURB
 	$("#name").typeIt({
 		speed: 60,
 		loop: false
 	})
 
-	.tiType("Hi, I'm Ang")
-	.tiPause(1000)
-	.tiType("ela")
-	.tiPause(500)
+	.tiType("Hi, I'm Angela")
+	.tiPause(800)
 	.tiDelete(14)
 
 	
@@ -77,24 +115,24 @@ $(document).ready(function() {
 
 
 	.tiPause(800)
-	.tiType("n aspiring designer")
+	.tiType("n aspiring UI/UX designer")
 	.tiPause(800)
-	.tiDelete(19)
+	.tiDelete(25)
 
 	.tiPause(800)
 	.tiType(" part-time vegan")
 	.tiPause(800)
-	.tiDelete(15)
+	.tiDelete(16)
 
 	.tiPause(800)
-	.tiType("food blogger")
+	.tiType("n occasional food blogger")
 	.tiPause(800)
-	.tiDelete(13)
+	.tiDelete(23)
 
 	.tiPause(800)
-	.tiType("n occasional meme-maker")
+	.tiType("experienced dog-sitter")
 	.tiPause(800)
-	.tiDelete(29)
+	.tiDelete(30)
 
 	.tiType("Hi, I'm Angela")
 	.tiPause(1000)
