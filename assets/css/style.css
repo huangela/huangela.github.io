@@ -58,7 +58,8 @@ a {
 	display: inline-block;
 	margin-left: 10%;
 	width: 30%;
-	margin-bottom: 5%;
+	
+	top: 50px;
 
 
 }
@@ -109,7 +110,7 @@ a {
 
 #teacaption {
 	position: absolute;
-	margin: 6% 0 0 50%;;
+	margin: 5% 0 0 50%;;
 	transition: all 0.2s ease-in-out;
 	opacity: 0;
 }
@@ -280,6 +281,16 @@ a {
 		transform: translateY(5px);
 	}
 }
+
+#answer {
+	position: relative;
+	margin: 20px;
+}
+
+/*#about-paragraph:hover {
+	color: blue;
+	cursor: pointer;
+}*/
 
 /*FADE IN OUT WEBPAGES*/
 @keyframes fadeIn {
