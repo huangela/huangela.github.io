@@ -96,11 +96,6 @@ $(document).ready(function() {
 
 	});
 
-	$("#about-paragraph").click(function() {
-		$('#answer').show();}, function() {
-			$('#answer').hide();
-		
-	});
 
 
 	// BLURB
